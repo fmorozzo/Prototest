@@ -26,12 +26,16 @@ a {
 }
 a:hover {
    text-decoration: none;
+   cursor: pointer;
 }
 h1, h2, h3 , h4 {
     font-weight: 300;
 }
 ul,li {
     margin: 0; padding: 0;
+}
+.right {
+    float: right;
 }
 body {
     
@@ -44,26 +48,53 @@ body {
                 background: #000;
                 width: 100%;
                 ul {
-                 width: 960px;
-                 margin: 0 auto;
-                }
-
-                a {
+                    width: 960px;
+                    margin: 0 auto;
+                    li {
+                       margin-left: 28px;
+                       display: inline-block;
+                       position: relative;
+                        &:first-child {
+                            margin-left:0;
+                    }
+                    a {
                         line-height: 31px;
                         float: left;
                         font-size: 13px;
                         color: #9B9B9B;
+                    }
+                   }
+                }
+                &.coorporative-nav {
+                    li:after {
+                        content: "|";
+                        position: absolute;
+                        top:0;right:0;bottom:0;left:-16px;
+                        font-size: 13px;
+                        font-family: "Open Sans";
+                        line-height: 31px;
+                        color: #9b9b9b;
+                    }
+                    li:first-child:after,
+                    li:last-child:after {
+                        content: "";
+                    } 
                 }
                 &.primary-nav {
                     background: #6C6D6E;
+                    height: 58px;
                     a {
                         color: #fff;
+                        font-size: 19px;
+                        font-weight: 300;
+                        line-height: 58px;
                     }
                 }
             }
         }
         #main-content {
-
+            width: 960px;
+            margin: 0 auto;
         }
         #page-footer {
 
