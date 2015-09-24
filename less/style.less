@@ -7,10 +7,9 @@ body {
     color: #cdcdcd;
     font-size: 18px;
     font-family: "Open Sans", serif;
-    font-weight: 400;
+    font-weight: 300;
     /*width: 1920px;
     height: 1080px;*/
-    overflow: hidden;
     position: relative;
     margin: 0;
     padding: 0;
@@ -83,19 +82,36 @@ body {
                 &.primary-nav {
                     background: #6C6D6E;
                     height: 58px;
+                    li {
+                        
+                       margin-left: 43px;
+                    }
                     a {
                         color: #fff;
                         font-size: 19px;
-                        font-weight: 300;
                         line-height: 58px;
                     }
-                    .search a{
-                        width: 19px;
-                        height: 19px;
+                    .logo a {
+                        width: 79px;
+                        height: 58px;
                         display: inline-block;
                         text-indent: -9999px;
-                        background: url(../images/icon_search.png) no-repeat 0 center;
+                        background: url(../images/logo.png) no-repeat 0 10px;
                         height: 58px;
+                        margin-right: 135px;
+                        margin-left: 20px;
+                    }
+                    .search {
+                        
+                        margin-left: 28px;
+                        a {
+                            width: 19px;
+                            height: 19px;
+                            display: inline-block;
+                            text-indent: -9999px;
+                            background: url(../images/icon_search.png) no-repeat 0 center;
+                            height: 58px;
+                        }
                     }
                     .my-content a{
                         width: 31px;
@@ -114,6 +130,115 @@ body {
         #main-content {
             width: 960px;
             margin: 0 auto;
+            margin-top: 18px;
+            
+            .thematic-areas {
+                height: 358px;
+                margin: 20px 0;
+                
+                .thematic-info,
+                .thematic-content {
+                    float: left;
+                }
+                .thematic-info {
+                    width: 320px;
+                    height: 358px;
+                    background: #fff;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                        .flexbox {
+                            display: block;
+                            width: 270px;
+
+                        .thematic-title {
+                            font-size: 48px;
+                            color: #000;
+                            margin: 0;
+
+                        }
+                        .thematic-slogan {
+                            font-size: 18px;
+                            color: #999;
+                            margin: 5px 0 8px;
+                        }
+                        .link {
+                            font-size: 16px;
+                            color: #43AAFB;
+                        }
+                    }
+                }
+                &.no-editor,
+                &.renting  {
+                    height: 331px;
+                    .thematic-info {
+                        width: 320px;
+                        height: 331px;
+                        .thematic-title {
+                            padding-top: 0;
+
+                        }
+                    }
+                }
+                &.renting {
+                    .thematic-info {
+                        background: #ECBD01;
+                        .thematic-title,
+                        .thematic-slogan,
+                        .link {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .section-more {
+                background: #fff;
+                height: 213px;
+                .title {
+                    font-size: 14px;
+                    color: #6F6F6F;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding: 34px 0 0 ;
+                    letter-spacing: 5px;
+                }
+                
+                .flexbox {
+                    
+                    display: flex;
+                    justify-content: space-between;
+                    height: 148px;
+                    
+                    .box {
+                        display: inline-block;
+                        text-align: center;
+                        position: relative;
+                        flex-grow: 1;
+                        
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 0; left:0;bottom:0;
+                            width: 1px;
+                            background: #ccc;
+                        }
+                        &:first-child:after {
+                            width: 0;
+                        }
+                        
+                        .area-name {
+                            color: #000;
+                            font-size: 25px;
+                            margin:30px 0 7px;
+                        }
+                        .link {
+                            color: #43AAFB;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
         }
         #page-footer {
 
