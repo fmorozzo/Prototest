@@ -156,7 +156,7 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-					.flexbox {
+					.thematic-link {
 						display: block;
 						width: 270px;
 
@@ -164,12 +164,15 @@ body {
                             font-size: 48px;
                             color: #000;
                             margin: 0;
+							font-weight: 300;
+							display: block;
 
                         }
                         .thematic-slogan {
                             font-size: 18px;
                             color: #999;
                             margin: 5px 0 8px;
+							display: block;
                         }
                         .link {
                             font-size: 16px;
@@ -427,12 +430,15 @@ body {
 .detail-page {
     .content {
         background: #F5F5F5;
+		width: 100% !important;
+		
         .show-details {
             padding: 55px 40px;
             overflow: hidden;
             color: #353535;
             font-size: 14px;
-
+			width: 1040px;
+			margin: 0 auto;
             .cover {
                 width: 236px;
                 height: 350px;
@@ -442,12 +448,14 @@ body {
             .details { 
 				display: inline-block;
 				width: 620px;
+				line-height: 20px;
                 h1 {
                     font-size: 26px;
                     padding-left: 37px;
                     position: relative;
                     display: block;
                     margin: 0 0 12px;
+					line-height: 36px;
                     &:after {
                         position: absolute;
                         content: "";
@@ -463,8 +471,13 @@ body {
                 span {
                     font-weight: 400;
                 }
+				em{
+					font-style: normal;
+					color: #cdcdcd;
+				}
                 .stars {
-                    line-height: 30px;
+                    line-height: 32px;
+					margin-top:15px;
                     .director,
                     .actor {
                         background: #e3e6e7;
@@ -485,7 +498,88 @@ body {
                         }
                     }
                 }
+				.actions {
+					padding-top: 18px;
+					.action-button {
+						background: #e3e6e7;
+						border-radius: 3px;
+						border: 0;
+						color: #6f6f6f;
+						display: inline-block;
+						line-height: 36px;
+						font-size: 16px;
+						font-family: "Open Sans", Helvetica,sans-serif;	
+						font-weight: 300;
+						margin: 0  0 0 8px;
+						padding: 0 28px 0 46px;
+						
+						&.play {
+							
+							padding: 0 28px 0 46px;
+							background: #43aafb url(../images/icon_play.png) no-repeat 15px center;
+							color: #fff;
+							
+						}
+						&.wishlist {
+							position: relative;
+							&:after{
+								position: absolute;
+								content: "";
+								top:0;right:0;bottom:0;left:0;
+								background: #d9dcdd url(../images/icon_flag.png) no-repeat 10px center;
+								border-radius: 3px 0 0 3px;
+								width: 36px;
+								height: 36px;
+							}
+						}
+						&.trailer {
+							padding: 0 28px;
+						}
+						&:first-child {
+							margin-left:0;
+						}
+					}
+					
+				}
             }
         }
     }
+	.section-recommendations {
+		width: 960px;
+		margin: 0 auto;
+		background: #e3e6e7;
+		color: #353535; 
+		padding-bottom: 40px;
+		h1 {
+			font-size: 22px;
+		}
+		.shows {
+			overflow: hidden;
+			display: flex;
+			justify-content: space-between;
+			li {
+				float: left;
+				width: 154px;
+				//margin-left: 4px;
+					
+				&:first-child {
+					margin-left: 0;
+				}
+				.cover {
+					width: 154px;
+					height: 224px;
+					
+				}
+				h2 {
+					width: 154px;
+					font-size: 14px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
 }
