@@ -347,15 +347,18 @@ body {
                             padding-left: 20px;
                             float: left;
                             height: 172px;
+                            width: 190px;
                             
                             h1 {
                                 color: #000;   
                                 font-size: 20px;
+                                margin: 33px 0 27px;
                             }
                             .duration, .genres {
                                 clear: both;
                                 color: #5C5D5D;
-                                font-size: 14;
+                                font-size: 14px;
+                                line-height: 13px;
                             }
                         }
                         
@@ -419,5 +422,48 @@ body {
                 }
             }
         }     
+    }
+}
+.detail-page {
+    .content {
+        background: #F5F5F5;
+        .show-details {
+            padding: 55px 40px;
+            overflow: hidden;
+            color: #353535;
+            font-size: 14px;
+            
+            .cover {
+                width: 236px;
+                height: 350px;
+                float: left;
+                margin-right: 20px;
+            }
+            .details { 
+            display: inline-block;
+            width: 620px;
+                h1 {
+                    font-size: 26px;
+                    padding-left: 37px;
+                    position: relative;
+                    display: block;
+                    margin: 0 0 12px;
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        top: 8px;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background: url('../images/icon_checks.png') no-repeat bottom;
+                        height: 20px;
+                        width: 28px;
+                    }
+                }
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
     }
 }
