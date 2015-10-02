@@ -1,4 +1,5 @@
 @import "filters.less";
+@import "tabs.less";
 
 @article_width: 240px;
 @article_margin: 15px;
@@ -106,7 +107,7 @@ body {
                             background: url(../images/logo.png) no-repeat 0 10px;
                             height: 58px;
                             margin-right: 135px;
-                            margin-left: 20px;
+                            margin-left: 0;
                         }
                         .search {
 
@@ -128,7 +129,7 @@ body {
                             background: url(../images/icon_mycontent_sprite.png) no-repeat  0 center;
                             height: 58px;
                             &:hover {
-                                background-position: -31px center;
+                                background-position: -30px center;
                             }
                         }
                     }
@@ -327,6 +328,9 @@ body {
                 display: block;
             }
             .section-container {
+				a {
+					color: #000;
+				}
                 .shows {
                     overflow: hidden;
                     .show {
@@ -512,17 +516,8 @@ body {
 						font-weight: 300;
 						margin: 0  0 0 8px;
 						padding: 0 28px 0 46px;
-						
-						&.play {
-							
-							padding: 0 28px 0 46px;
-							background: #43aafb url(../images/icon_play.png) no-repeat 15px center;
-							color: #fff;
-							
-						}
-						&.wishlist {
-							position: relative;
-							&:after{
+						position: relative;
+						&:after{
 								position: absolute;
 								content: "";
 								top:0;right:0;bottom:0;left:0;
@@ -531,9 +526,33 @@ body {
 								width: 36px;
 								height: 36px;
 							}
+						&.play {
+							padding: 0 28px 0 46px;
+							background: #43aafb url(../images/icon_play.png) no-repeat 15px center;
+							color: #fff;
+							&:after{
+								background: none;
+							}
+							
+						}
+						&.wishlist {
+							&:after{
+								background: #d9dcdd url(../images/icon_flag.png) no-repeat 10px center;
+							}
+						}
+						&.follow {
+							&:after{
+								background: #d9dcdd url(../images/icon_follow.png) no-repeat 10px center;
+							}
 						}
 						&.trailer {
 							padding: 0 28px;
+							&:after{
+								background: none;
+							}
+						}
+						&.follow {
+							
 						}
 						&:first-child {
 							margin-left:0;
@@ -545,8 +564,9 @@ body {
         }
     }
 	.section-recommendations {
-		width: 960px;
 		margin: 0 auto;
+		text-align: left;
+		width: 960px;
 		background: #e3e6e7;
 		color: #353535; 
 		padding-bottom: 40px;
@@ -579,6 +599,46 @@ body {
 					margin: 0;
 					padding: 0;
 				}
+			}
+		}
+	}
+}
+.detail-page-series {
+	.content .show-details .details h1 {
+		padding-left: 0 ;
+		&:after {
+			background: none;
+		}
+	}
+	
+	.section-seasons-selection {
+		margin: 0 auto;
+		background: #fff;
+		text-align: center;
+	}
+}
+.page-my-content {
+	background: #fff;
+	.title {
+		font-size: 20px;
+		color: #353535;
+		background: url(../images/icon_mycontent_title.png) no-repeat 0 2px;
+		padding-left: 25px;
+		margin: 15px auto 0;
+		width: 170px;
+		line-height: 36px;
+		i {
+			background: url(../images/icon_mycontent_title.png) no-repeat;
+			position: relative;
+			display: inline-block;
+			width:19px;
+			height: 27px;
+			
+			&:after {
+				position: absolute;
+				top:0;right: 0; bottom: 0; left: 0;
+				content:"";			
+				background: url(../images/icon_mycontent_title.png) no-repeat;
 			}
 		}
 	}
