@@ -9,12 +9,17 @@ and open the template in the editor.
 		<title>Home</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css">
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet/less" href="less/style.less">
 		<script src="js/vendor/less.js"></script>
 		<script src="js/vendor/jquery-2.1.1.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			document.addEventListener("touchstart", function(){}, true);
+		</script>
 	</head>
-	<body>
+	<body class="home">
 		<div id="container">
 			<header>
 				<div class="header-container">
@@ -39,16 +44,30 @@ and open the template in the editor.
 							<li><a href="cine.html">Infantil</a></li>
 							<li><a href="cine.html">...</a></li>
 							<li class="search right"><a href="#">Search</a></li>
-							<li class="my-content right"><a href="mis_contenidos.html">My Content</a></li>
+							<li class="my-content right"><a href="mis_contenidos.html">My Content</a>
+								<ul class="submenu">
+									<li><a href="#">Mis alquilados</a></li>
+									<li><a href="#">Lo quiero ver</a></li>
+									<li><a href="#">Vistos</a></li>
+									<li><a href="#">Siguiendo</a></li>
+									<li><a href="#">Grab. disponibles</a></li>
+									<li><a href="#">Grab. programadas</a></li>
+								</ul>
+							</li>
+							<li class="tv-guide right"><a href="#.html">Guía TV</a>
+								<ul class="submenu">
+									<li><a href="#">Mis alquilados</a></li>
+									<li><a href="#">Lo quiero ver</a></li>
+								</ul>
+							</li>
 						</ul>
 					</nav>
 				</div>
 
 
 			</header><!--end header-->
-
 			<div id="thematic-areas" role="main">
-
+				
 				<section class="thematic-area cine-area">
 					<div class="thematic-info">
 						<a class="thematic-link" href="cine.html">
